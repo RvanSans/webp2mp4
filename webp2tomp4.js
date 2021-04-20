@@ -26,25 +26,25 @@ function uploadimg (filename, name) {
 case 'tomp4':
 									
                                    if (!isQuotedSticker) return reply('Reply stiker nya')
-					if (ben.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.isAnimated == true)
-						encmedia = JSON.parse(JSON.stringify(ben).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-						 media = await benny.downloadAndSaveMediaMessage(encmedia)
+					if (bos.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.isAnimated == true)
+						encmedia = JSON.parse(JSON.stringify(bos).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+						 media = await rvan.downloadAndSaveMediaMessage(encmedia)
 						anu = await uploadimg(media, Date.now() + '.webp')
 						console.log(anu)
 						reply(mess.wait)
 						buffer = await getBuffer(`https://api-self.herokuapp.com/api/webp2mp4?img_url=${anu.result.image}`)
-						benny.sendMessage(from, buffer, video, {mimetype: 'video/mp4', caption: 'Nih..'})
+						rvan.sendMessage(from, buffer, video, {mimetype: 'video/mp4', caption: 'Nih..'})
 					         break
 		case 'togif':
 									
                                    if (!isQuotedSticker) return reply('Reply stiker nya')
-					if (ben.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.isAnimated == true)
-						encmedia = JSON.parse(JSON.stringify(ben).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-						 media = await benny.downloadAndSaveMediaMessage(encmedia)
+					if (bos.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.isAnimated == true)
+						encmedia = JSON.parse(JSON.stringify(bos).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+						 media = await rvan.downloadAndSaveMediaMessage(encmedia)
 						anu = await uploadimg(media, Date.now() + '.webp')
 						console.log(anu)
 						reply(mess.wait)
 						buffer = await getBuffer(`https://api-self.herokuapp.com/api/webp2mp4?img_url=${anu.result.image}`)
-						benny.sendMessage(from, buffer, video, {mimetype: 'video/gif', caption: 'Nih..'})
+						rvan.sendMessage(from, buffer, video, {mimetype: 'video/gif', caption: 'Nih..'})
 					         break
 		
